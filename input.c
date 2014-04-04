@@ -114,7 +114,7 @@ at_input_list_new (void)
 #if (MagickLibVersion < 0x0538)
   MagickIncarnate("");
 #else
-  InitializeMagick("");
+  MagickCoreGenesis("",MagickFalse);
 #endif
   GetExceptionInfo(&exception);
 #if (MagickLibVersion < 0x0534)
@@ -208,7 +208,7 @@ at_input_shortlist (void)
 #if (MagickLibVersion < 0x0538)
   MagickIncarnate("");
 #else
-  InitializeMagick("");
+  MagickCoreGenesis("",MagickFalse);
 #endif
   GetExceptionInfo(&exception);
 #if (MagickLibVersion < 0x0534)
