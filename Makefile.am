@@ -127,7 +127,9 @@ autotrace_SOURCES=\
 
 INCLUDES = $(MAGICK_CFLAGS) $(LIBPSTOEDIT_CFLAGS)
 autotrace_LDADD =				\
-		libautotrace.la			\
+		libautotrace.la
+
+libautotrace_la_LIBADD = \
 		$(MAGICK_LDFLAGS)		\
 		$(LIBPNG_LDFLAGS)		\
 		$(LIBSWF_LDFLAGS)		\

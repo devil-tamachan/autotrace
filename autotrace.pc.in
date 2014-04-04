@@ -6,6 +6,6 @@ includedir=@includedir@
 Name: Autotrace
 Description: a utility that converts bitmap to vector graphics
 Version: @VERSION@
-Requires: 
-Libs: -L@libdir@ -lautotrace @LIBPNG_LDFLAGS@ @MAGICK_LDFLAGS@ @LIBSWF_LDFLAGS@ @LIBPSTOEDIT_LIBS@
+Requires.private: @PKGCONFIG_REQS@
+Libs: -L@libdir@ -lautotrace
 Cflags: -I@includedir@

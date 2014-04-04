@@ -42,12 +42,10 @@ typedef struct _at_input_opts_type   at_input_opts_type;
 typedef struct _at_output_opts_type  at_output_opts_type;
 typedef struct _at_bitmap_type at_bitmap_type;
 typedef struct _at_color_type at_color_type;
-typedef enum _at_polynomial_degree at_polynomial_degree;
 typedef struct _at_spline_type at_spline_type;
 typedef struct _at_spline_list_type at_spline_list_type;
 typedef struct _at_spline_list_array_type at_spline_list_array_type;
 #define at_splines_type at_spline_list_array_type 
-typedef enum _at_msg_type at_msg_type;
 
 /* Color in RGB */
 struct _at_color_type
@@ -69,6 +67,7 @@ enum _at_polynomial_degree
   /* not the real number of points to define a
      circle but to distinguish between a cubic spline */
 };
+typedef enum _at_polynomial_degree at_polynomial_degree;
 
 /* A Bezier spline can be represented as four points in the real plane:
    a starting point, ending point, and two control points.  The
@@ -225,6 +224,7 @@ enum _at_msg_type
   AT_MSG_FATAL = 1,
   AT_MSG_WARNING,
 };
+typedef enum _at_msg_type at_msg_type;
 
 typedef
 void (* at_msg_func) (at_string msg, at_msg_type msg_type, at_address client_data);

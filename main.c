@@ -34,16 +34,16 @@ static char * output_name = (char *)"";
 static at_output_write_func output_writer = NULL;
 
 /* Whether to print version information */
-static at_bool printed_version;
+static int printed_version;
 
 /* Whether to write a log file */
-static at_bool logging = false;
+static int logging = false;
 
 /* Whether to dump a bitmap file */
-static at_bool dumping_bitmap = false;
+static int dumping_bitmap = false;
 
 /* Report tracing status in real time (--report-progress) */
-static at_bool report_progress = false;
+static int report_progress = false;
 #define dot_printer_max_column 50
 #define dot_printer_char '|'
 static void dot_printer(at_real percentage, at_address client_data);
@@ -322,7 +322,7 @@ read_command_line (int argc, char * argv[],
 	    str = "big";
 	  
 	  printf("%d bit, %s endian\n",
-		 sizeof(void *) * 8,
+		 (int)(sizeof(void *) * 8),
 		 str);
 	  exit(0);
 	}

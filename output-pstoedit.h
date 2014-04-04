@@ -32,6 +32,6 @@ int     output_pstoedit_invoke_writer          (at_output_write_func writer,
 						at_spline_list_array_type shape,
 						at_msg_func msg_func, 
 						at_address msg_data);
-at_bool output_pstoedit_is_unusable_writer(const at_string name);
+at_bool output_pstoedit_is_unusable_writer(const char *name);
 
 #endif /* Not def: OUTPUTPSTOEDIT_H */

@@ -276,7 +276,7 @@ output_pstoedit_writer (const at_string suffix,
 }
 
 at_bool
-output_pstoedit_is_unusable_writer(const at_string name)
+output_pstoedit_is_unusable_writer(const char *name)
 {
   if (0 == strcmp(name, "sam")
       || 0 == strcmp(name, "dbg")

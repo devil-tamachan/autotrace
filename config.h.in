@@ -81,5 +81,8 @@
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
 
+/* Define as printf format-string modifier for size_t */
+#undef SIZET_FORMAT
+
 /* Define to 1 if you have the ANSI C header files. */
 #undef STDC_HEADERS
